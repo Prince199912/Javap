@@ -1,0 +1,25 @@
+package OverLoading;
+
+ class Animal {
+
+}
+class Monkey extends Animal{
+	
+}
+class Test1{
+	public void m1(Animal a) {
+		System.out.println("Animal version");
+	}
+	public void m1(Monkey m) {
+		System.out.println("Monkey version");
+	}
+	public static void main(String[] args) {
+		Test1 t=new Test1();
+		Animal a=new Animal();
+		Monkey m=new Monkey();
+		t.m1(a);
+		t.m1(m);
+		Animal a1=new Monkey();
+		t.m1(a1);
+	}
+}
